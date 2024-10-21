@@ -55,3 +55,25 @@ p {
         0 0 8px black;
     }
 }
+
+
+.firework {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: white;
+    border-radius: 50%;
+    animation: explode 1.2s ease-out forwards;
+    pointer-events: none;
+  }
+  
+  @keyframes explode {
+    0% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    100% {
+      opacity: 0;
+      transform: translate(var(--x), var(--y)) scale(0.2);
+    }
+  }
