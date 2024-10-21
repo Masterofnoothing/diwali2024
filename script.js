@@ -71,11 +71,11 @@ window.addEventListener('touchmove', (event) => {
 
     isScrolling = true; // Set scrolling to true
 
-    if (startY > endY + 50) {
+    if (startY > endY + 20) {
         // Swiped up
         currentSectionIndex++;
         scrollToSection(currentSectionIndex);
-    } else if (startY < endY - 50) {
+    } else if (startY < endY - 20) {
         // Swiped down
         currentSectionIndex--;
         scrollToSection(currentSectionIndex);
@@ -84,5 +84,6 @@ window.addEventListener('touchmove', (event) => {
     // Set a timeout to reset the scrolling flag after a short delay (e.g., 800ms)
     setTimeout(() => {
         isScrolling = false; // Allow scrolling again
-    }, 800);
+    }, 100);
 }, { passive: false });
+
