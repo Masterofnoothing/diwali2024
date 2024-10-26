@@ -11,6 +11,14 @@ body {
     cursor: url('images/cursor32.png'), auto;
 }
 
+.main
+{
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+
+}
+
 section {
     padding: 20px;
     margin: 20px auto;
@@ -19,6 +27,7 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
+    scroll-snap-align: start;
 }
 
 h1 {
