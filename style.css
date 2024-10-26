@@ -11,6 +11,12 @@ body {
     cursor: url('images/cursor32.png'), auto;
 }
 
+
+
+p {
+  font-size: 56px;
+  line-height: 1.6;
+}
 .main
 {
   scroll-snap-type: y mandatory;
@@ -41,48 +47,12 @@ p {
     line-height: 1.6;
 }
 
-@keyframes flicker {
-    0% {
-      opacity: 1;
-      text-shadow: 
-        0 0 2px orange,
-        0 0 5px orangered,
-        0 0 10px black;
-    }
-    50% {
-      opacity: 0.9;
-      text-shadow: 
-        0 0 3px orange,
-        0 0 6px orangered,
-        0 0 12px black;
-    }
-    100% {
-      opacity: 0.8;
-      text-shadow: 
-        0 0 1px orange,
-        0 0 4px orangered,
-        0 0 8px black;
-    }
-}
 
 
-.firework {
-    position: absolute;
-    width: 5px;
-    height: 5px;
-    background: white;
-    border-radius: 50%;
-    animation: explode 1.2s ease-out forwards;
-    pointer-events: none;
-  }
-  
-  @keyframes explode {
-    0% {
-      opacity: 1;
-      transform: scale(1);
+
+  @media (max-width: 800px) {
+    p{
+      font-size: 32px;
     }
-    100% {
-      opacity: 0;
-      transform: translate(var(--x), var(--y)) scale(0.2);
-    }
+    
   }
